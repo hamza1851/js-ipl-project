@@ -9,9 +9,6 @@ const topEconomicalBowler = function (matchesData, deliveriesData, year) {
       for (const delivery of deliveriesData) {
         const { match_id } = delivery
         if (id === match_id) {
-          console.log(
-            `This is id ${id}, this is ${match_id}, this is year ${season}`
-          )
           const { bowler, extra_runs, total_runs } = delivery
           if (extra_runs !== "0") {
             if (!mp.has(bowler)) {
