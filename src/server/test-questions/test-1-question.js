@@ -5,5 +5,5 @@ import * as fs from "fs"
 console.log("---------------Questions-1---------------")
 const arrOfObj = getMatches(data)
 const json = JSON.stringify(arrOfObj)
-fs.writeFileSync("../public/output/1-matches-per-year.json", json)
+fs.writeFileSync("../../public/output/1-matches-per-year.json", json)
 console.log(arrOfObj)

@@ -1,22 +1,27 @@
-function getMatches(data) {
-  const mp = new Map()
+function getMatches(matchesData) {
+  return matchesData.reduce((result, { season }) => {
+    result[season] = (result[season] || 0) + 1
+    return result
+  }, {})
 
-  for (const match of data) {
-    const { season } = match
+  // const mp = new Map()
 
-    if (!mp.has(season)) {
-      mp.set(season, 1)
-    } else {
-      mp.set(season, mp.get(season) + 1)
-    }
-  }
+  // for (const match of data) {
+  //   const { season } = match
 
-  const result = {}
+  //   if (!mp.has(season)) {
+  //     mp.set(season, 1)
+  //   } else {
+  //     mp.set(season, mp.get(season) + 1)
+  //   }
+  // }
 
-  for (const [season, count] of mp) {
-    if (season !== null) result[season] = count
-  }
-  return result
+  // const result = {}
+
+  // for (const [season, count] of mp) {
+  //   if (season !== null) result[season] = count
+  // }
+  // return result
 }
 
 export default getMatches
