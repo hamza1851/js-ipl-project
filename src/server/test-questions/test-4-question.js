@@ -3,11 +3,13 @@ import matchesData from "../../public/output/parsedMatchesData.json" assert { ty
 import topEconomicalBowler from "../4-top-ten-economical-bollers.js"
 import * as fs from "fs"
 
-const top_ten_economic = topEconomicalBowler(
+const top_ten_economical_bowler = topEconomicalBowler(
   matchesData,
   deliveriesData,
   "2015"
 )
-const json = JSON.stringify(top_ten_economic)
-fs.writeFileSync("../../public/output/4-top_ten_economical.json", json)
-// console.log(json)
+const string_converted_data = JSON.stringify(top_ten_economical_bowler)
+fs.writeFileSync(
+  "../../public/output/4-top_ten_economical.json",
+  string_converted_data
+)

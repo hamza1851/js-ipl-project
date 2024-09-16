@@ -4,6 +4,8 @@ import teamsGetExtraRuns from "../3-extra-runs-conceded.js"
 import * as fs from "fs"
 
 const winnerByRuns = teamsGetExtraRuns(matchesData, deliveriesData, "2016")
-const json = JSON.stringify(winnerByRuns)
-fs.writeFileSync("../../public/output/3-teams-get-extra-runs.json", json)
-console.log(winnerByRuns)
+const string_converted_data = JSON.stringify(winnerByRuns)
+fs.writeFileSync(
+  "../../public/output/3-teams-get-extra-runs.json",
+  string_converted_data
+)
